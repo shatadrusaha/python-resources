@@ -1,0 +1,12 @@
+[project]
+name = "python-resources"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ipykernel>=6.29.5",
+    "numpy>=2.2.0",
+    "pandas>=2.2.3",
+    "scikit-learn>=1.6.0",
+]
