@@ -1,16 +1,3 @@
-''' Resources:
-
-https://scikit-learn.org/stable/api/sklearn.compose.html
-https://scikit-learn.org/stable/api/sklearn.preprocessing.html
-
-https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.get_dummies.html
-
-https://towardsdatascience.com/one-hot-encoding-scikit-vs-pandas-2133775567b8
-https://harshal-soni.medium.com/onehotencoding-vs-labelencoder-vs-pandas-get-dummies-how-and-why-b190dff7a86f
-
-
-'''
-
 import pandas as pd
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import make_column_transformer

@@ -1,16 +1,8 @@
-''' Resources:
-
-https://medium.com/bluetuple-ai/how-to-enable-gpu-support-for-tensorflow-or-pytorch-on-macos-4aaaad057e74
-
-# uv add ipykernel torch torchvision torchaudio  
-# uv add tensorflow tensorflow-macos tensorflow-metal
-
- '''
-
 import tensorflow as tf
 from tensorflow.python.client import device_lib
 import torch
 
+# Tensorflow
 print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
 
 devices = tf.config.list_physical_devices()
@@ -24,9 +16,9 @@ if gpus:
 tf.config.list_physical_devices('GPU')
 print(device_lib.list_local_devices())
 
-# import tensorflow as tf
 tf.config.list_physical_devices('GPU')
 
+# Test tensorflow
 cifar = tf.keras.datasets.cifar100
 (x_train, y_train), (x_test, y_test) = cifar.load_data()
 model = tf.keras.applications.ResNet50(
@@ -42,10 +34,7 @@ model.compile(optimizer="adam", loss=loss_fn, metrics=["accuracy"])
 model.fit(x_train, y_train, epochs=5, batch_size=64)
 
 
-#########################################################################
-
-
-
+# Pytorch
 gpus = tf.config.list_physical_devices('GPU')
 if gpus:
   details = tf.config.experimental.get_device_details(gpus[0])
