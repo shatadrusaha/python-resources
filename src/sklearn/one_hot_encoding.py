@@ -14,7 +14,7 @@ https://harshal-soni.medium.com/onehotencoding-vs-labelencoder-vs-pandas-get-dum
 import pandas as pd
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import make_column_transformer
-from sklearn.pipeline import make_pipeline
+# from sklearn.pipeline import make_pipeline
 from sklearn.base import BaseEstimator, TransformerMixin
 
 # It is always good to have an explicit list of categories
