@@ -1,0 +1,7 @@
+https://stackoverflow.com/questions/37461868/difference-between-run-and-cmd-in-a-dockerfile
+
+https://docs.docker.com/reference/dockerfile/
+https://docs.docker.com/reference/dockerfile/#run
+https://docs.docker.com/reference/dockerfile/#cmd
+https://docs.docker.com/reference/dockerfile/#entrypoint
+https://www.docker.com/blog/docker-best-practices-choosing-between-run-cmd-and-entrypoint/
