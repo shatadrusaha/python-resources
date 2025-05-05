@@ -1,0 +1,48 @@
+####################		Lesson-1		####################
+
+# Data Science with Pandas 
+https://paiml.com/docs/home/books/minimal-python/chapter07-data-science-pandas/
+
+# Data Science Libraries 
+https://paiml.com/docs/home/books/minimal-python/chapter08-data-science-libraries/
+
+# Google Earth Colab Notebook 
+https://developers.google.com/earth-engine/guides/python_install-colab
+
+# Tensorflow Colab Notebooks 
+https://cloud.google.com/tpu/docs/colabs
+
+# Introductory Concepts in Python, IPython and Jupyter
+https://colab.research.google.com/drive/1jPhYOyvweOJVW3Engci6GcnVEGd_UhGI
+
+# Understanding Libraries, Classes, Control Structures, and Regular Expressions 
+https://colab.research.google.com/drive/1dmTMM-zmGToCmcaedyNj93X-dLZeg2KG#scrollTo=4J2lIggJLUMS
+
+# IO Operations in Python and Pandas 
+https://colab.research.google.com/drive/1sORrIFB8t9NbW9Nhko-EgFI1HWOKwn28#scrollTo=qhdbSG-xtuPU
+
+# AWS Cloud-Native Python for ML/AI 
+https://colab.research.google.com/drive/1hl0aHbJqoJIyC1P3OwK9UljP7bupTKEv#scrollTo=lujOt1rIipPQ
+
+# Additional Topics in Data Science
+https://github.com/noahgift/functional_intro_to_python#additional-topics
+
+
+####################		Lesson-2		####################
+
+# Data Science Libraries 
+https://paiml.com/docs/home/books/minimal-python/chapter08-data-science-libraries/
+
+# Google Earth Colab Notebook 
+https://developers.google.com/earth-engine/guides/python_install-colab
+
+# Tensorflow Colab Notebooks 
+https://cloud.google.com/tpu/docs/colabs
+
+# Introductory Concepts in Python, IPython and Jupyter
+https://colab.research.google.com/drive/1jPhYOyvweOJVW3Engci6GcnVEGd_UhGI
+
+####################		Lesson-3		####################
+
+#
+

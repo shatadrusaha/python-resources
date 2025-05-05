@@ -1,0 +1,57 @@
+####################		Lesson-1		####################
+
+# MLOps: Continuous delivery and automation pipelines in machine learning 
+https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning#mlops_level_1_ml_pipeline_automation
+
+# What is DevOps? 
+https://www.atlassian.com/devops
+
+# Sowing the seeds of ethical AI: 4 tasks to stay on track 
+https://cloud.google.com/blog/transform/4-tasks-to-ensure-your-companys-ai-is-ethical
+
+# Build, Test and Deploy ETL solutions using AWS Glue and AWS CDK 
+https://aws.amazon.com/blogs/big-data/build-test-and-deploy-etl-solutions-using-aws-glue-and-aws-cdk-based-ci-cd-pipelines/
+
+
+####################		Lesson-2		####################
+
+# Increase reliability in data science and machine learning projects with CircleCI 
+https://circleci.com/blog/increase-reliability-in-data-science-and-machine-learning-projects-with-circleci/
+
+# Machine Learning operations maturity model 
+https://learn.microsoft.com/en-us/azure/architecture/example-scenario/mlops/mlops-maturity-model?WT.mc_id=academic-0000-alfredodeza
+
+# DevOps tech: Continuous delivery  
+https://cloud.google.com/architecture/devops/devops-tech-continuous-delivery
+
+# Detect data drift on datasets 
+https://learn.microsoft.com/en-us/azure/machine-learning/v1/how-to-monitor-datasets?tabs=python&view=azureml-api-1
+
+# Automate MLOps with SageMaker Projects 
+https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-projects.html
+
+# Databricks Feature Store 
+https://learn.microsoft.com/en-us/azure/databricks/machine-learning/feature-store/
+
+
+####################		Lesson-3		####################
+
+# Build a Web Application with Flask 
+https://paiml.com/docs/home/books/minimal-python/chapter06-build-web-apps-flask/
+
+# MLOps for Azure
+https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/mlops-machine-learning
+
+# Introduction to Microservices 
+https://www.nginx.com/blog/introduction-to-microservices/
+
+# Building a Go App on App Engine 
+https://cloud.google.com/appengine/docs/standard/go/building-app
+
+# Getting Started with App Runner 
+https://docs.aws.amazon.com/apprunner/latest/dg/getting-started.html
+
+# Learn Github Actions 
+https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
+
+
