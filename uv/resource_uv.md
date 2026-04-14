@@ -379,6 +379,12 @@ uv python install '>=3.8,<3.10'
     ```
 
     The `--upgrade-package` flag will attempt to update the specified package to the latest compatible version, while keeping the rest of the lockfile intact.
+
+    To update all packages, do the following:
+    ```bash
+    uv lock --upgrade
+    uv sync
+    ```
     
 - _Update/Create and activate an enviornment_
     ```bash
