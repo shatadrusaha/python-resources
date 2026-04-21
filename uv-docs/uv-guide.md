@@ -1,6 +1,6 @@
-# `uv` - Quick Guide !!!
+# `uv` - Guide
 
-_N.B.: Installation process is specific to `MacOS` and `Linux`. Check `uv` [documentation](https://docs.astral.sh/uv/getting-started/installation/) for `Windows`._
+> ℹ️ Installation process is specific to `macOS` and `Linux`. Check `uv` [documentation](https://docs.astral.sh/uv/getting-started/installation/) for `Windows`.
 
 ## Table of Contents
 
@@ -53,7 +53,7 @@ Upgrade `uv` depending on the installation method used:
 | pip | `pip install --upgrade uv` |
 | Homebrew | `brew upgrade uv` |
 
-> ℹ️  When `uv` is installed via the standalone installer, it can update itself on-demand. When another installation method is used, self-updates are disabled. Use the package manager's upgrade method instead.
+> ℹ️ When `uv` is installed via the standalone installer, it can update itself on-demand. When another installation method is used, self-updates are disabled. Use the package manager's upgrade method instead.
 
 
 ### 1.3. Shell autocompletion
@@ -80,7 +80,7 @@ To remove `uv` from the system, do the following:
 
 - Remove the `uv` and `uvx` binaries.
 
-    ```
+    ```bash
     # Standalone installer
     rm ~/.local/bin/uv ~/.local/bin/uvx
     
@@ -174,9 +174,7 @@ cd hello-world
 uv init
 ```
 
-```
-ℹ️ N.B.: If there's a `pyproject.toml`, `uv` will exit with an error.
-```
+> ℹ️ If there's a `pyproject.toml`, `uv` will exit with an error.
 
 Custom project can also be created using `uv`.
 
@@ -216,7 +214,8 @@ uv init example-app
 The project includes a pyproject.toml, a sample file (main.py), a readme, and a Python version pin file (.python-version).
 ```bash
 tree example-app
-
+```
+```text
 example-app
 ├── .python-version
 ├── README.md
@@ -238,7 +237,8 @@ The source code is moved into a src directory with a module directory and an `__
 
 ```bash
 tree example-pkg
-
+```
+```text
 example-pkg
 ├── .python-version
 ├── README.md
@@ -257,14 +257,15 @@ Libraries can be created by using the `--lib` flag:
 ```bash
 uv init --lib example-lib
 ```
-Note
-Using --lib implies --package. Libraries always require a packaged project.
+
+> ℹ️ Using --lib implies --package. Libraries always require a packaged project.
 
 As with a packaged application, a src layout is used. A `py.typed` marker is included to indicate to consumers that types can be read from the library:
 
 ```bash
 tree example-lib
-
+```
+```text
 example-lib
 ├── .python-version
 ├── README.md
@@ -318,8 +319,10 @@ By default, `uv build` will build the project in the current directory, and plac
 ```bash
 uv build
 ls dist/
-# hello-world-0.1.0-py3-none-any.whl
-# hello-world-0.1.0.tar.gz
+```
+```text
+hello-world-0.1.0-py3-none-any.whl
+hello-world-0.1.0.tar.gz
 ```
 
 ## 3. Miscellaneous
@@ -353,7 +356,7 @@ ls dist/
 | `-v` | Display verbose output for a command (e.g., `uv sync -v`). |
 | `-vv` | Increase verbosity level (can be repeated, e.g., `uv sync -vv`). |
 
-### 3.4 View version
+### 3.4. View version
 
 | Command | Description |
 |---------|-------------|
