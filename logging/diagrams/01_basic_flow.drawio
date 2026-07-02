@@ -1,0 +1,76 @@
+<mxfile host="65bd71144e">
+    <diagram id="basic-flow" name="Basic Logging Flow">
+        <mxGraphModel dx="649" dy="831" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Python Logging: Core Flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="20" width="360" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Your Code&#xa;logger.info(&quot;message&quot;)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5ff;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="80" width="240" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Logger" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="170" width="240" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Logger Level Check&#xa;record level &gt;= logger level?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="270" width="200" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Filter (optional)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="410" width="200" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Handler" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="540" width="240" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Handler Level Check&#xa;record level &gt;= handler level?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="640" width="200" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Formatter" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d4e6f1;strokeColor=#3c70b5;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="780" width="240" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Output&#xa;(console/file/email/etc.)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="880" width="240" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Discard" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#b20000;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="295" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Discard" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#b20000;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="430" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Discard" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#b20000;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="665" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="3" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="4" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="YES" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="5" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="NO" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="5" target="11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="PASS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="6" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="REJECT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="6" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="7" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="YES" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="NO" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8" target="13" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="9" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
