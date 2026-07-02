@@ -1,0 +1,59 @@
+<mxfile host="app.diagrams.net" modified="2026-06-20T00:00:00Z" agent="5.0" version="24.0">
+  <diagram id="hierarchy" name="Logger Hierarchy and Propagation">
+    <mxGraphModel dx="1280" dy="720" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="2" value="Python Logging: Logger Hierarchy and Propagation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="20" width="560" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="3" value="root&#xa;level=DEBUG&#xa;handlers=[console]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f4f8;strokeColor=#0277bd;" vertex="1" parent="1">
+          <mxGeometry x="330" y="100" width="160" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="app&#xa;level=WARNING&#xa;handlers=[file]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;" vertex="1" parent="1">
+          <mxGeometry x="100" y="250" width="160" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="app.database&#xa;level=NOTSET&#xa;inherits WARNING" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#6a1b9a;" vertex="1" parent="1">
+          <mxGeometry x="40" y="410" width="170" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="app.auth&#xa;level=DEBUG&#xa;propagate=FALSE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede7f6;strokeColor=#5e35b1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="410" width="170" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="7" value="library&#xa;level=INFO&#xa;handlers=[null]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;" vertex="1" parent="1">
+          <mxGeometry x="560" y="250" width="160" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="8" value="library.requests&#xa;level=NOTSET&#xa;inherits INFO" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcedc8;strokeColor=#558b2f;" vertex="1" parent="1">
+          <mxGeometry x="560" y="410" width="170" height="95" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="20" edge="1" parent="1" source="3" target="4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="21" edge="1" parent="1" source="4" target="5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="22" edge="1" parent="1" source="4" target="6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="23" edge="1" parent="1" source="3" target="7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="24" edge="1" parent="1" source="7" target="8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="30" value="How propagation works" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="560" width="260" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="31" value="app.database.info(msg)&#xa;- app.database checks effective level (inherits WARNING)&#xa;- if propagate=True, event bubbles to app, then root" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#7cb342;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="590" width="360" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="32" value="app.auth.info(msg)&#xa;- app.auth handles locally&#xa;- propagate=False stops bubbling to app/root" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#7cb342;align=left;" vertex="1" parent="1">
+          <mxGeometry x="430" y="590" width="360" height="120" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
