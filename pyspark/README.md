@@ -27,34 +27,17 @@ PySpark is the Python API for Apache Spark — a distributed computing framework
 
 ## Architecture Overview
 
-```
-┌─────────────────────────────────────────────────────┐
-│                   Driver Program                     │
-│  ┌───────────────────────────────────────────────┐  │
-│  │              SparkSession                      │  │
-│  │  (Entry point: combines SparkContext,          │  │
-│  │   SQLContext, HiveContext)                     │  │
-│  └───────────────────────────────────────────────┘  │
-└──────────────────────┬──────────────────────────────┘
-                       │
-              ┌────────▼────────┐
-              │  Cluster Manager │
-              │  (Local/YARN/    │
-              │   Mesos/K8s)    │
-              └────────┬────────┘
-                       │
-        ┌──────────────┼──────────────┐
-        │              │              │
-   ┌────▼────┐   ┌────▼────┐   ┌────▼────┐
-   │ Worker  │   │ Worker  │   │ Worker  │
-   │  Node   │   │  Node   │   │  Node   │
-   │         │   │         │   │         │
-   │┌───────┐│   │┌───────┐│   │┌───────┐│
-   ││Executor││   ││Executor││   ││Executor││
-   │├───────┤│   │├───────┤│   │├───────┤│
-   ││ Tasks  ││   ││ Tasks  ││   ││ Tasks  ││
-   │└───────┘│   │└───────┘│   │└───────┘│
-   └─────────┘   └─────────┘   └─────────┘
+```mermaid
+flowchart TD
+    A["Driver Program"] --> B["SparkSession\n(Entry point: combines SparkContext,\nSQLContext, HiveContext)"]
+    B --> C["Cluster Manager\n(Local/YARN/Mesos/K8s)"]
+    C --> W1["Worker Node"]
+    C --> W2["Worker Node"]
+    C --> W3["Worker Node"]
+
+    W1 --> E1["Executor\n→ Tasks"]
+    W2 --> E2["Executor\n→ Tasks"]
+    W3 --> E3["Executor\n→ Tasks"]
 ```
 
 ### Key Components
